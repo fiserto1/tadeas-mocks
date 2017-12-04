@@ -136,7 +136,7 @@ log.info "Path: "+ requestPath
 def id = requestPath.split('/')[3]
 log.info "Id: " + id
 
-if (accessToken.equals("token asdfasdljljkh543asdf")){
+if (accessToken.equals("Bearer asdfasdljljkh543asdf")){
 if (id.equals("1")) {
 	return "group1"
 } else if (id.equals("2")) {
