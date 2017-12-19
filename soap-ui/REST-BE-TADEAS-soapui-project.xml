@@ -362,141 +362,144 @@ else{
 "message": "NOT_AUTHORIZED"}</con:responseContent></con:response><con:response name="Bad Request" id="be393192-bdb3-4fcd-b98d-f366cd5c7814" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent>{
 	"status":"ERROR",
 	"message": "BAD_REQUEST"
-}</con:responseContent></con:response><con:response name="Delivery Student" id="b70826fc-ff53-4e68-bed7-7e0db03751e9" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>[
-{'id':1,
-'taskDeliveryWindow':{
-			"id":1,
+}</con:responseContent></con:response><con:response name="Delivery Student" id="b70826fc-ff53-4e68-bed7-7e0db03751e9" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>[{
+		"id": 1,
+		"taskDeliveryWindow": {
+			"id": 1,
 			"task": {
-				"id":1,
+				"id": 1,
 				"name": "Task1",
 				"issuer": 2,
-				"active":true,
+				"active": true,
 				"issueDate": "2017-01-12",
 				"definition": "Task definition"
 			},
 			"name": "TaskWindow1",
 			"issuer": 2,
 			"solver": 1,
-			"active":true,
+			"active": true,
 			"issueDate": "2017-01-12",
 			"startDate": "2017-02-12",
 			"deadlineDate": "2017-24-12",
 			"definition": "Task Window definition"
 		},
-'solution': 'http://example.com/solution1.doc',
-'deliveryDate': '2017-10-12',
-'deliveryUser': 1,
-'valid': false,
-},
-{'id':2,
-'taskDeliveryWindow':{
-	"id":2,
-	"task": {
-		"id":2,
-		"name": "Task2",
-		"issuer": 2,
-		"active":true,
-		"issueDate": "2017-02-12",
-		"definition": "Task definition"
+		"solution": "http://example.com/solution1.doc",
+		"deliveryDate": "2017-10-12",
+		"deliveryUser": 1,
+		"valid": false
 	},
-	"name": "TaskWindow2",
-	"issuer": 2,
-	"solver": 1,
-	"active":true,
-	"issueDate": "2017-02-12",
-	"startDate": "2017-02-12",
-	"deadlineDate": "2017-24-12",
-	"definition": "Task Window definition"
-}
-'solution': 'http://example.com/solution2.doc',
-'deliveryDate': '2017-12-12',
-'deliveryUser': 1,
-'valid': false,
-},
-{'id':3,
-'taskDeliveryWindow':{
-	"id":2,
-	"task": {
-		"id":2,
-		"name": "Task2",
-		"issuer": 2,
-		"active":true,
-		"issueDate": "2017-02-12",
-		"definition": "Task definition"
+	{
+		"id": 2,
+		"taskDeliveryWindow": {
+			"id": 2,
+			"task": {
+				"id": 2,
+				"name": "Task2",
+				"issuer": 2,
+				"active": true,
+				"issueDate": "2017-02-12",
+				"definition": "Task definition"
+			},
+			"name": "TaskWindow2",
+			"issuer": 2,
+			"solver": 1,
+			"active": true,
+			"issueDate": "2017-02-12",
+			"startDate": "2017-02-12",
+			"deadlineDate": "2017-24-12",
+			"definition": "Task Window definition"
+		},
+		"solution": "http://example.com/solution2.doc",
+		"deliveryDate": "2017-12-12",
+		"deliveryUser": 1,
+		"valid": false
 	},
-	"name": "TaskWindow2",
-	"issuer": 2,
-	"solver": 1,
-	"active":true,
-	"issueDate": "2017-02-12",
-	"startDate": "2017-02-12",
-	"deadlineDate": "2017-24-12",
-	"definition": "Task Window definition"
+	{
+		"id": 3,
+		"taskDeliveryWindow": {
+			"id": 2,
+			"task": {
+				"id": 2,
+				"name": "Task2",
+				"issuer": 2,
+				"active": true,
+				"issueDate": "2017-02-12",
+				"definition": "Task definition"
+			},
+			"name": "TaskWindow2",
+			"issuer": 2,
+			"solver": 1,
+			"active": true,
+			"issueDate": "2017-02-12",
+			"startDate": "2017-02-12",
+			"deadlineDate": "2017-24-12",
+			"definition": "Task Window definition"
+		},
+		"solution": "http://example.com/solution2.doc",
+		"deliveryDate": "2017-13-12",
+		"deliveryUser": 1,
+		"valid": true,
+		"acceptanceDate": "2017-15-12",
+		"acceptanceUser": 2,
+		"acceptanceMessage": "Ok 9/10",
+		"acceptanceBinary": "http://example.com/acceptance1.doc"
 	}
-'solution': 'http://example.com/solution2.doc',
-'deliveryDate': '2017-13-12',
-'deliveryUser': 1,
-'valid': true,
-'acceptanceDate':'2017-15-12',
-'acceptanceUser': 2,
-'acceptanceMessage': 'Ok 9/10',
-'acceptanceBinary':'http://example.com/acceptance1.doc',
-}
-]</con:responseContent></con:response><con:response name="DeliveryTeacher" id="b1c686d1-bce1-46a1-bce1-f16e115463c3" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>[
-{'id':2,
-'taskDeliveryWindow':{
-	"id":2,
-	"task": {
-		"id":2,
-		"name": "Task2",
-		"issuer": 2,
-		"active":true,
-		"issueDate": "2017-02-12",
-		"definition": "Task definition"
+]</con:responseContent></con:response><con:response name="DeliveryTeacher" id="b1c686d1-bce1-46a1-bce1-f16e115463c3" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>[{
+		"id": 2,
+		"taskDeliveryWindow": {
+			"id": 2,
+			"task": {
+				"id": 2,
+				"name": "Task2",
+				"issuer": 2,
+				"active": true,
+				"issueDate": "2017-02-12",
+				"definition": "Task definition"
+			},
+			"name": "TaskWindow2",
+			"issuer": 2,
+			"solver": 1,
+			"active": true,
+			"issueDate": "2017-02-12",
+			"startDate": "2017-02-12",
+			"deadlineDate": "2017-24-12",
+			"definition": "Task Window definition"
+		},
+		"solution": "http://example.com/solution2.doc",
+		"deliveryDate": "2017-12-12",
+		"deliveryUser": 1,
+		"valid": false
 	},
-	"name": "TaskWindow2",
-	"issuer": 2,
-	"solver": 1,
-	"active":true,
-	"issueDate": "2017-02-12",
-	"startDate": "2017-02-12",
-	"deadlineDate": "2017-24-12",
-	"definition": "Task Window definition"
-}
-'solution': 'http://example.com/solution2.doc',
-'deliveryDate': '2017-12-12',
-'deliveryUser': 1,
-'valid': false,
-},
-{'id':3,
-'taskDeliveryWindow':{
-	"id":2,
-	"task": {
-		"id":2,
-		"name": "Task2",
-		"issuer": 2,
-		"active":true,
-		"issueDate": "2017-02-12",
-		"definition": "Task definition"
-	},
-	"name": "TaskWindow2",
-	"issuer": 2,
-	"solver": 1,
-	"active":true,
-	"issueDate": "2017-02-12",
-	"startDate": "2017-02-12",
-	"deadlineDate": "2017-24-12",
-	"definition": "Task Window definition"
+	{
+		"id": 3,
+		"taskDeliveryWindow": {
+			"id": 2,
+			"task": {
+				"id": 2,
+				"name": "Task2",
+				"issuer": 2,
+				"active": true,
+				"issueDate": "2017-02-12",
+				"definition": "Task definition"
+			},
+			"name": "TaskWindow2",
+			"issuer": 2,
+			"solver": 1,
+			"active": true,
+			"issueDate": "2017-02-12",
+			"startDate": "2017-02-12",
+			"deadlineDate": "2017-24-12",
+			"definition": "Task Window definition"
+		},
+		"solution": "http://example.com/solution2.doc",
+		"deliveryDate": "2017-13-12",
+		"deliveryUser": 1,
+		"valid": true,
+		"acceptanceDate": "2017-15-12",
+		"acceptanceUser": 2,
+		"acceptanceMessage": "Ok 9/10",
+		"acceptanceBinary": "http://example.com/acceptance1.doc"
 	}
-'solution': 'http://example.com/solution2.doc',
-'deliveryDate': '2017-13-12',
-'deliveryUser': 1,
-'valid': true,
-'acceptanceDate':'2017-15-12',
-'acceptanceUser': 2,
-'acceptanceMessage': 'Ok 9/10',
-'acceptanceBinary':'http://example.com/acceptance1.doc',
-}
 ]</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/delivery/{id}" method="GET" resourcePath="/delivery/" id="8815e3cb-882a-4e34-8f64-ab4f9b70ad16"><con:settings/><con:defaultResponse>Forbidden</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath><![CDATA[//check session token
 def accessToken = mockRequest.getRequestHeaders().Authorization[0]
 log.info "Access Token: "+ accessToken
