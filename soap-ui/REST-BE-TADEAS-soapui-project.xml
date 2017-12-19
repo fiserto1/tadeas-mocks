@@ -442,7 +442,8 @@ else{
 		"acceptanceDate": "2017-15-12",
 		"acceptanceUser": 2,
 		"acceptanceMessage": "Ok 9/10",
-		"acceptanceBinary": "http://example.com/acceptance1.doc"
+		"acceptanceBinary": "http://example.com/acceptance1.doc",
+		"acceptation": true
 	}
 ]</con:responseContent></con:response><con:response name="DeliveryTeacher" id="b1c686d1-bce1-46a1-bce1-f16e115463c3" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>[{
 		"id": 2,
@@ -498,7 +499,8 @@ else{
 		"acceptanceDate": "2017-15-12",
 		"acceptanceUser": 2,
 		"acceptanceMessage": "Ok 9/10",
-		"acceptanceBinary": "http://example.com/acceptance1.doc"
+		"acceptanceBinary": "http://example.com/acceptance1.doc",
+		"acceptation": true
 	}
 ]</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/delivery/{id}" method="GET" resourcePath="/delivery/" id="8815e3cb-882a-4e34-8f64-ab4f9b70ad16"><con:settings/><con:defaultResponse>Forbidden</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath><![CDATA[//check session token
 def accessToken = mockRequest.getRequestHeaders().Authorization[0]
@@ -609,6 +611,7 @@ else{
 'acceptanceUser': 2,
 'acceptanceMessage': 'Ok 9/10',
 'acceptanceBinary':'http://example.com/acceptance1.doc',
+"acceptation": true
 }</con:responseContent></con:response><con:response name="Bad Request" id="484b45c9-3903-4fba-87b7-0fa9c122d8ca" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent>{
 	"status":"ERROR",
 	"message": "BAD_REQUEST"
