@@ -93,7 +93,7 @@ if (id.equals("1")) {
 } else {
 	return "Bad Request"
 }
-</con:dispatchPath><con:response name="group1" id="e57099f1-e562-44e1-b448-679ff5e18a3f" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"name":"g1"}</con:responseContent></con:response><con:response name="group2" id="f259c1e1-44d1-4d9f-8b0e-9b8e47f81251" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"name":"g2"}</con:responseContent></con:response><con:response name="Bad Request" id="369bf598-513b-4b5d-8d61-32106ba918f7" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"status":"ERROR",
+</con:dispatchPath><con:response name="group1" id="e57099f1-e562-44e1-b448-679ff5e18a3f" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"name":"g1"}</con:responseContent></con:response><con:response name="group2" id="f259c1e1-44d1-4d9f-8b0e-9b8e47f81251" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"name":"g2"}</con:responseContent></con:response><con:response name="Bad Request" id="369bf598-513b-4b5d-8d61-32106ba918f7" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent>{"status":"ERROR",
 "message":"BAD_REQUEST"}</con:responseContent></con:response><con:response name="Forbidden" id="40339f2f-89ed-4f06-a193-3db7c5547f15" httpResponseStatus="403" mediaType="application/json"><con:settings/><con:responseContent>{"status":"ERROR",
 "message":"NOT AUTHENTICATED"}</con:responseContent><con:header><con:name>WWW-Authenticate</con:name><con:value>Token</con:value></con:header></con:response></con:restMockAction><con:restMockAction name="/role" method="GET" resourcePath="/role" id="06a389d4-6c36-4be8-b403-429b0c63a01c"><con:settings/><con:defaultResponse>Success</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>//check session token
 def accessToken = mockRequest.getRequestHeaders().Authorization[0]
@@ -107,7 +107,7 @@ if (!accessToken.equals("Bearer 0dc1f6e1-c7f1-41ac-8ce2-32b6b3e57aa3") ||
 return "Success"
 </con:dispatchPath><con:response name="Success" id="b170ad22-194d-4043-b362-b7c43150d6f8" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>[
 {"id":1, "name":"Student"},
-{"id":2, "name":"Teacher"},
+{"id":2, "name":"Teacher"}
 ]</con:responseContent></con:response><con:response name="Forbidden" id="d26d93db-4771-468b-9964-d00a61f0404f" httpResponseStatus="403" mediaType="application/json"><con:settings/><con:responseContent>{"status":"ERROR",
 "message":"NOT AUTHENTICATED"}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/role/{id}" method="GET" resourcePath="/role/" id="69146ce1-143c-4826-bf47-d4b3e42b59e4"><con:settings/><con:defaultResponse>Bad Request</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>//check session token
 def accessToken = mockRequest.getRequestHeaders().Authorization[0]
@@ -535,8 +535,8 @@ else if (accessToken.equals("Bearer 121555e8-ff98-4dcc-a1ad-e7f06e674192") && !i
 else{
 		return "Forbidden"
 		}]]></con:dispatchPath><con:response name="Forbidden" id="4bd36607-f58f-46a7-a1e4-6d9259e5c6c0" httpResponseStatus="403" mediaType="application/json"><con:settings/><con:responseContent>{"status": "ERROR",
-"message": "NOT_AUTHORIZED"}</con:responseContent></con:response><con:response name="Delivery1" id="ed332b7a-fa4a-4221-8282-585bbee28447" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{'id':1,
-'taskDeliveryWindow':{
+"message": "NOT_AUTHORIZED"}</con:responseContent></con:response><con:response name="Delivery1" id="ed332b7a-fa4a-4221-8282-585bbee28447" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"id":1,
+"taskDeliveryWindow":{
 			"id":1,
 			"task": {
 				"id":1,
@@ -555,12 +555,12 @@ else{
 			"deadlineDate": "2017-24-12",
 			"definition": "Task Window definition"
 		},
-'solution': 'http://example.com/solution1.doc',
-'deliveryDate': '2017-10-12',
-'deliveryUser': 1,
-'valid': false,
-}</con:responseContent></con:response><con:response name="Delivery2" id="80f2695c-17cb-4772-acda-8e889e99bea0" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{'id':2,
-'taskDeliveryWindow':{
+"solution": "http://example.com/solution1.doc",
+"deliveryDate": "2017-10-12",
+"deliveryUser": 1,
+"valid": false
+}</con:responseContent></con:response><con:response name="Delivery2" id="80f2695c-17cb-4772-acda-8e889e99bea0" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"id":2,
+"taskDeliveryWindow":{
 	"id":2,
 	"task": {
 		"id":2,
@@ -578,13 +578,13 @@ else{
 	"startDate": "2017-02-12",
 	"deadlineDate": "2017-24-12",
 	"definition": "Task Window definition"
-}
-'solution': 'http://example.com/solution2.doc',
-'deliveryDate': '2017-12-12',
-'deliveryUser': 1,
-'valid': false,
-}</con:responseContent></con:response><con:response name="Delivery3" id="92e87814-9412-4a20-bb0d-cf8f0dfdf862" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{'id':3,
-'taskDeliveryWindow':{
+},
+"solution": "http://example.com/solution2.doc",
+"deliveryDate": "2017-12-12",
+"deliveryUser": 1,
+"valid": false
+}</con:responseContent></con:response><con:response name="Delivery3" id="92e87814-9412-4a20-bb0d-cf8f0dfdf862" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"id":3,
+"taskDeliveryWindow":{
 	"id":2,
 	"task": {
 		"id":2,
@@ -602,15 +602,15 @@ else{
 	"startDate": "2017-02-12",
 	"deadlineDate": "2017-24-12",
 	"definition": "Task Window definition"
-	}
-'solution': 'http://example.com/solution2.doc',
-'deliveryDate': '2017-13-12',
-'deliveryUser': 1,
-'valid': true,
-'acceptanceDate':'2017-15-12',
-'acceptanceUser': 2,
-'acceptanceMessage': 'Ok 9/10',
-'acceptanceBinary':'http://example.com/acceptance1.doc',
+	},
+"solution": "http://example.com/solution2.doc",
+"deliveryDate": "2017-13-12",
+"deliveryUser": 1,
+"valid": true,
+"acceptanceDate":"2017-15-12",
+"acceptanceUser": 2,
+"acceptanceMessage": "Ok 9/10",
+"acceptanceBinary":"http://example.com/acceptance1.doc",
 "acceptation": true
 }</con:responseContent></con:response><con:response name="Bad Request" id="484b45c9-3903-4fba-87b7-0fa9c122d8ca" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent>{
 	"status":"ERROR",
@@ -679,7 +679,7 @@ else{
 
 </con:dispatchPath><con:response name="Forbidden" id="1d01f57b-bb03-4770-9738-941ede2078a9" httpResponseStatus="403" mediaType="application/json"><con:settings/><con:responseContent>{"status": "ERROR",
 "message": "NOT_AUTHORIZED"}</con:responseContent></con:response><con:response name="Accepted" id="7eecf90b-ff5e-4375-877b-4cc29aad02ed" httpResponseStatus="201" mediaType="application/json"><con:settings/><con:responseContent>{
-"status": "OK"
+"status": "OK",
 "id":4
 }</con:responseContent></con:response><con:response name="Bad Request" id="9ed9976e-5a5f-446a-ac3e-3f595b829e4c" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent>{
 	"status":"ERROR",
